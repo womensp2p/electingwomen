@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h1>Candidate Toolkit</h1>
-    <p style="text-align: center; padding-left:200px; padding-right:200px">Through local partners,the Candidate Toolkit provides Links to training resources, Campaign resources (such as vetted communications experts), Tools (such as document storage, constituent messaging, and fundraising assistance)</p>
+    <p style="text-align: center; padding-left:200px; padding-right:200px">Through local partners,the Candidate Toolkit provides links to training resources, campaign resources (such as vetted communications experts), tools (such as document storage, constituent messaging, and fundraising assistance)</p>
     <br />
     <p>Select your region to access candidate training resources near you:</p>
 

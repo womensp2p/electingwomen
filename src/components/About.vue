@@ -26,6 +26,13 @@
       </p>
     </div>
 
+    <div class="dev"><br />
+      <h4>David Quach</h4><br />
+      <p>
+      David Quach is an active developer working on projects outside the realm of norm. He has shown himself working on projects from mobile applications to virtual reality and is always found within the hackathon community. During his free time he would contribute to open source software and never ever found to be doing nothing.
+      </p>
+    </div>
+
     </div>
 </template>
 
