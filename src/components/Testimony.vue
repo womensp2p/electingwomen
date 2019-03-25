@@ -7,7 +7,12 @@
         <b-card title="Card title that wraps to a new line"
                 :img-src="images.asset1"
                 img-alt="Image"
-                img-top v-b-modal.modal1>
+                img-top v-b-modal.modal1
+                border-variant="danger"
+                header="VIOLENCE Kenya - My Oponent sabotage me"
+                header-border-variant="danger"
+                header-text-variant="danger"
+                >
           <!-- v-b-modal.modalName is how you create a modal. Whatever modalName you provide here will be the modal the user accesses when they click the card.-->
           <b-card-text>
             This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -41,7 +46,10 @@
         <b-card title="Card title that wraps to a new line"
                 :img-src="images.asset7"
                 img-alt="Image"
-                img-top v-b-modal.modal1>
+                img-top v-b-modal.modal1
+                border-variant="warning"
+                header="CORRUPTION Kenya : My oponent sent false messages to my people"
+                header-bg-variant="transparent">
           <!-- v-b-modal.modalName is how you create a modal. Whatever modalName you provide here will be the modal the user accesses when they click the card.-->
           <b-card-text>
             This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -61,7 +69,7 @@
           <b-card-text class="small text-muted">Last updated 3 mins ago</b-card-text>
         </b-card>
 
-        <b-card :img-src="images.asset9" img-alt="Image" overlay v-b-modal.modal3 />
+        <b-card :img-src="images.asset9" img-alt="Image" overlay v-b-modal.modal3 border-variant="success" header="CAMPAIGN TRAIL USA - Helping women stand up"/>
 
         <b-card :img-src="images.asset10" img-alt="Image" img-top v-b-modal.modal3>
 
@@ -75,7 +83,11 @@
         <b-card title="Title"
                 :img-src="images.asset6"
                 img-alt="Image"
-                img-top v-b-modal.modal3>
+                img-top v-b-modal.modal3
+                border-variant="danger"
+                header="VIOLENCE CAMBODIA - A peaceful march ended with violence"
+                header-border-variant="danger"
+                header-text-variant="danger">
           <b-card-text>
             This card has supporting text below as a natural lead-in to additional content.
           </b-card-text>
@@ -234,7 +246,7 @@
         max-rows="8" />
         <br>
         <label class="checkbox-item">Make a Post Anonymously</label>
-          <input type="checkbox" class="checkbox-input">
+        <input type="checkbox" class="checkbox-input">
 
     </b-col>
     <br>
