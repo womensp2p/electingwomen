@@ -215,7 +215,7 @@
     </b-col>
     <b-col sm="10">
       <b-form-textarea
-        id="textarea-auto-height"
+        id="writeYourStory"
         placeholder=""
         rows="3"
         max-rows="8" />
@@ -228,7 +228,7 @@
     </b-col>
     <b-col sm="10">
       <b-form-textarea
-        id="textarea-auto-height"
+        id="headline"
         placeholder=""
         rows="1"
         max-rows="8" />
