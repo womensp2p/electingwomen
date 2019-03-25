@@ -232,6 +232,10 @@
         placeholder=""
         rows="1"
         max-rows="8" />
+        <br>
+        <label class="checkbox-item">Make a Post Anonymously</label>
+          <input type="checkbox" class="checkbox-input">
+
     </b-col>
     <br>
     <b-button class="postTestimony" v-b-modal.postTestimony>Submit</b-button>
