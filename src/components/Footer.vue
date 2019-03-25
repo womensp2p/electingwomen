@@ -30,12 +30,12 @@ export default {
     position: absolute;
     width: 100%;
     flex-shrink: 0;
-    margin-top:15%;
+    margin-top:22%;
   }
 .container {
   padding-top: 2%;
 }
 .float-left{
-  width: 45%;
+  width: 50%;
 }
 </style>

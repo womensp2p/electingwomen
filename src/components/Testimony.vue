@@ -1,4 +1,6 @@
 <template>
+<div>
+<perfect-scrollbar>
   <div class="carddeck main-container">
     <div>
       <b-card-group columns>
@@ -18,10 +20,12 @@
         </b-modal>
 
         <!-- the video does not need a modal since it is already hosted on YouTube -->
-        <b-embed class="video" type="iframe"
+        <b-embed controls class="video" type="iframe"
                  aspect="16by9"
                  :src="videos.asset1"
-                 allowfullscreen />
+                 allowfullscreen 
+                 :autoplay="0"
+                 />
 
 
 
@@ -186,12 +190,70 @@
       </b-card-group>
     </div>
   </div>
+  </perfect-scrollbar>
+  <br>
+  <div class="float-left">
+  <div id="my-strictly-unique-vue-upload-multiple-image" style="display: flex; justify-content: center; float:right;">
+    <vue-upload-multiple-image
+      drag-text="Upload Media"
+      browse-text=""
+      @upload-success="uploadImageSuccess"
+      @before-remove="beforeRemove"
+      @edit-image="editImage"
+      @data-change="dataChange"
+      :data-images="images"
+      ></vue-upload-multiple-image>
+  </div>
+  </div>
+  <div class="float-right">
+  <b-container fluid>
+
+  
+  <b-row>
+    <b-col sm="2">
+      <label for="textarea-auto-height">Write your story:</label>
+    </b-col>
+    <b-col sm="10">
+      <b-form-textarea
+        id="textarea-auto-height"
+        placeholder=""
+        rows="3"
+        max-rows="8" />
+    </b-col>
+  </b-row>
+  <br>
+  <b-row>
+    <b-col sm="2">
+      <label for="textarea-auto-height">Add a headline:</label>
+    </b-col>
+    <b-col sm="10">
+      <b-form-textarea
+        id="textarea-auto-height"
+        placeholder=""
+        rows="1"
+        max-rows="8" />
+    </b-col>
+    <br>
+    <b-button class="postTestimony" v-b-modal.postTestimony>Submit</b-button>
+        <b-modal id="postTestimony" title="">
+          You have successfully posted. 
+        </b-modal>
+        <br>
+  </b-row>
+  </b-container fluid>
+
+  </div>
+  </div>
 </template>
 
 <script>
-import img from '../assets/asset_3.jpg'
+import VueUploadMultipleImage from 'vue-upload-multiple-image'
+import axios from 'axios'
   export default {
     name: 'Testimony',
+    components: {
+      VueUploadMultipleImage,
+    },
      data() {
         return {
             images: {
@@ -214,7 +276,30 @@ import img from '../assets/asset_3.jpg'
                 asset1: require('@/assets/asset_video.mp4')
             }
         }
+    },
+    methods: {
+    uploadImageSuccess(formData, index, fileList) {
+      console.log('data', formData, index, fileList)
+      // Upload image api
+      // axios.post('http://your-url-upload', { data: formData }).then(response => {
+      //   console.log(response)
+      // })
+    },
+    beforeRemove (index, done, fileList) {
+      console.log('index', index, fileList)
+      var r = confirm("remove image")
+      if (r == true) {
+        done()
+      } else {
+      }
+    },
+    editImage (formData, index, fileList) {
+      console.log('edit data', formData, index, fileList)
+    },
+    dataChange (data) {
+      console.log(data)
     }
+  }
 }
 </script>
 
@@ -238,5 +323,14 @@ import img from '../assets/asset_3.jpg'
   .btn-primary {
     background-color: #00303f;
     border-color: #00303f;
+  }
+  .ps {
+  height: 500px;
+  }
+  .float-right{
+  width: 50%
+  }
+  .postTestimony{
+    margin-top: 5%;
   }
 </style>

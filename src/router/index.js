@@ -12,10 +12,12 @@ import Footer from '@/components/Footer'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+import PerfectScrollbar from 'vue2-perfect-scrollbar'
+import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
+Vue.use(PerfectScrollbar)
 
 export default new Router({
   routes: [

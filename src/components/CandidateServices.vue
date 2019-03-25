@@ -11,7 +11,7 @@
         <b-dropdown-item v-b-modal.moreInfo>United States</b-dropdown-item>
         <b-dropdown-item v-b-modal.moreInfo>Canada</b-dropdown-item>
         <b-dropdown-item v-b-modal.moreInfo>Mexico</b-dropdown-item>
-      </b-dropdown><br />
+      </b-dropdown>
       <b-dropdown right text="South America" class="dropDown">
         <b-dropdown-item v-b-modal.moreInfo>Brazil</b-dropdown-item>
         <b-dropdown-item v-b-modal.moreInfo>Venezuela</b-dropdown-item>
